@@ -1,0 +1,7 @@
+Vet Passwords: fixemup21, animaldoc12
+Zookeeper Passwords: keysopendoors4, monkeybiz$
+Admin Passwords: i<3thezoo, topdog45
+
+Vet Usernames: {bernie.gorilla , jerome.grizzlybear}
+Zookeeper Usernames : {griffin.keys , donald.monkey}
+Admin Usernames : {rosario.dawson , bruce.grizzlybear}
