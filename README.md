@@ -6,7 +6,7 @@
 * [Self Assesment](#self-assesment)
 * [Code review](#code-review)
 * [Coding Collision](#coding-collision-enhancement)
-* [Zoo Monitoring](#zoo-monitoring-enhancement)
+* [Zoo Monitoring](#Milestone3)
 * [Animal Shelter Database](#animal-shelter-database-enhancement)
 
 ------------------------------------------------------------
