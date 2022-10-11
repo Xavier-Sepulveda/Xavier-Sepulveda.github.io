@@ -3,11 +3,11 @@
 ------------------------------------------------------------
 
 ## Table of Contents
-* [Self Assesment](#self-assesment)
-* [Code review](#code-review)
-* [Coding Collision](#coding-collision-enhancement)
-* [Zoo Monitoring](#Milestone3)
-* [Animal Shelter Database](#animal-shelter-database-enhancement)
+* [Self Assesment]
+* [Code review]
+* [Coding Collision]
+* [Zoo Monitoring]
+* [Animal Shelter Database]
 
 ------------------------------------------------------------
 
