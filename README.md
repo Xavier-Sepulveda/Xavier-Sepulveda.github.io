@@ -29,8 +29,16 @@ I learned about multiple aspects related to data structures and algorithms from 
 There were also a number of course I’ve taken to gain skills and understanding in software engineering and databases. You will be able to see me showcase my ability to create a RESTful API. The RESTful API will use GET, POST, PUT, and DELETE requests to update data stored in a database. Some other examples come from courses like CS-405 Secure Coding, where we learned techniques and strategies to mitigate vulnerabilities within software. In CS-410 Reverse Software Engineering, I learned how to reverse engineer code. this is a good skill because it helps if a program need to be recreated to run on a different operating system, or if the legacy code needs to be updated to today’s standards.
 
 ### Security:
-Many courses touched upon the importance of security. You can see some aspects put into place such as the authentication function utilized in the Zoo Monitoring Application, or the technique used to connect to my database for the Animal Shelter Database. Another Course that touched upon the aspect of security was CS-405 Secure Coding. I learned how to put a security policy together, which included a Defense in Depth approach, principles to follow, and coding standards.
+Many courses touched upon the importance of security. You can see some aspects put into place such as the authentication function utilized in the Zoo Monitoring Application, or the technique used to connect to my database for the Animal Shelter Database. Another course that touched upon the aspect of security was CS-405 Secure Coding. I learned how to put a security policy together, which included a Defense in Depth approach, principles to follow, and coding standards.
 
-## Code Review
+------------------------------------------------------------
+
+## Milestone 1 - Code Review
 My Code review can be found here: https://www.screencast.com/t/nRuNcNOj 
+
+------------------------------------------------------------
+
+## Milestone 2 - Enhancement One: Software Design and Engineering
+
+### Artifact
 
