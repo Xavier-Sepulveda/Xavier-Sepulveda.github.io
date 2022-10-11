@@ -3,11 +3,11 @@
 ------------------------------------------------------------
 
 ## Table of Contents
-* [Self Assesment]
-* [Code review]
-* [Coding Collision]
-* [Zoo Monitoring]
-* [Animal Shelter Database]
+* Self Assesment
+* Code review
+* Coding Collision
+* Zoo Monitoring
+* Animal Shelter Database
 
 ------------------------------------------------------------
 
@@ -31,6 +31,6 @@ There were also a number of course I’ve taken to gain skills and understanding
 ### Security:
 Many courses touched upon the importance of security. You can see some aspects put into place such as the authentication function utilized in the Zoo Monitoring Application, or the technique used to connect to my database for the Animal Shelter Database. Another Course that touched upon the aspect of security was CS-405 Secure Coding. I learned how to put a security policy together, which included a Defense in Depth approach, principles to follow, and coding standards.
 
-
-
+## Code Review
+My Code review can be found here: https://www.screencast.com/t/nRuNcNOj 
 
