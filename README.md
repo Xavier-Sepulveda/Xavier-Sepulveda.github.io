@@ -49,6 +49,13 @@ I chose to include this artifact because it shows some understanding in computer
 ### Screencast of original running [LINK](https://www.screencast.com/t/OCDR9678D "Video Link") or at https://www.screencast.com/t/OCDR9678D
 Original Artifact Code [LINK](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/blob/main/Milestone2/Original.cpp)
 ### Screencast of enhanced running [LINK](https://www.screencast.com/t/yuLxCZhzq "Video Link") or at https://www.screencast.com/t/yuLxCZhzq
+Enhanced Artifact Code [LINK](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/blob/main/Milestone2/Enhanced.cpp)
+
+### Orgininal 
+![image](/assets/images/originalCollision.png)
+
+### Enhanced
+![image](/assets/images/Enhanced.png)
 
 By using OpenGL's built in functions, I was able to make the window bigger and changed the window title. If you look at the main() function I added the additional brick objects to create my new brick layout with different colors. To do so, I needed to adjust the points at which the brick sits on the x and y axis of the window.  I have also modified the float speed of the circles to come out faster. Altering the DrawCircle() method I was able to cut the circle in half, to make them look like flying saucers/ ufos buy changing the for loop. I added additional speeds in the circle class. Those were used in the if statements to change speed of circle/ufo. While attempting to alter some more, I created a CheckCollision(Circle* circ) function for the circles, but wasn’t able to implement it properly. I have added my name to the window title and adjusted the size of the window as well by updating the main() function. By utilizing the functions provided by the header files I was able to create the updated window using the glfwCreateWindow to create the window object. 
 
