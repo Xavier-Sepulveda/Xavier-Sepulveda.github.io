@@ -10,15 +10,14 @@
 #include <windows.h> // header file that contains the declarations for the functions in the Windows API
 
 
-using namespace std;
-
-const float DEG2RAD = 3.14159 / 180; // Converts degrees to radians
+const float DEG2RAD = 3.14159 / 180;
 
 void processInput(GLFWwindow* window);
 
 enum BRICKTYPE { REFLECTIVE, DESTRUCTABLE };
 enum ONOFF { ON, OFF };
 
+// Defines brick object data
 class Brick
 {
 public:
@@ -26,14 +25,13 @@ public:
 	float x, y, width;
 	BRICKTYPE brick_type;
 	ONOFF onoff;
-	
-	//defines brick object data
+
 	Brick(BRICKTYPE bt, float xx, float yy, float ww, float rr, float gg, float bb)
 	{
 		brick_type = bt; x = xx; y = yy, width = ww; red = rr, green = gg, blue = bb;
 		onoff = ON;
 	};
-	
+
 	// Function to draw brick when on
 	void drawBrick()
 	{
@@ -49,27 +47,26 @@ public:
 			glVertex2d(x - halfside, y - halfside);
 			glVertex2d(x - halfside, y + halfside);
 
-			glVertex2d(x + halfside, y + halfside);
-			glVertex2d(x + halfside, y - halfside);
-			glVertex2d(x - halfside, y - halfside);
-			glVertex2d(x - halfside, y + halfside);
-
 			glEnd();
 		}
 	}
 };
 
- // defines circle object data
-class Circle 
+// Defines circle data
+class Circle
 {
 public:
 	float red, green, blue;
 	float radius;
 	float x;
 	float y;
-	float speed = 0.02; // By adjusting the speed, i can control how fst the circles move
+	float speed1 = 0.005;                 //Added additional speeds
+	float speed2 = 0.02;
+	float speed3 = 0.05;
+	float speed4 = 0.09;
 	int direction; // 1=up 2=right 3=down 4=left 5 = up right   6 = up left  7 = down right  8= down left
-	
+
+
 	Circle(double xx, double yy, double rr, int dir, float rad, float r, float g, float b)
 	{
 		x = xx;
@@ -81,7 +78,7 @@ public:
 		radius = rad;
 		direction = dir;
 	}
-	
+
 	//Checks if circle hit a brick, if reflective the circle will continue moving, if destructable brick disappears 
 	void CheckCollision(Brick* brk)
 	{
@@ -96,13 +93,14 @@ public:
 		}
 		else if (brk->brick_type == DESTRUCTABLE)
 		{
-			if ((x > brk->x - brk->width && x <= brk->x + brk->width) && (y > brk->y - brk->width && y <= brk->y + brk->width))
+			if ((x >= brk->x - brk->width && x <= brk->x + brk->width) && (y > brk->y - brk->width && y <= brk->y + brk->width))
 			{
 				brk->onoff = OFF;
+
 			}
 		}
 	}
-	
+
 	//attempted to check for circle collision
 
 	/*void CheckCollision(Circle* circ)
@@ -116,21 +114,22 @@ public:
 		}
 
 	}*/
-	
+
+
 	// Function to randomize the direction the circle will go
 	int GetRandomDirection()
 	{
 		return (rand() % 8) + 1;
 	}
-	
-	// to Change the direction of the circles
+	 
+	// Added additional speeds in the circle class. Used in the if statements to change speed of circle/ufo
 	void MoveOneStep()
 	{
 		if (direction == 1 || direction == 5 || direction == 6)  // up
 		{
 			if (y > -1 + radius)
 			{
-				y -= speed;
+				y -= speed1;
 			}
 			else
 			{
@@ -142,7 +141,7 @@ public:
 		{
 			if (x < 1 - radius)
 			{
-				x += speed;
+				x += speed2;
 			}
 			else
 			{
@@ -152,8 +151,9 @@ public:
 
 		if (direction == 3 || direction == 7 || direction == 8)  // down
 		{
-			if (y < 1 - radius) {
-				y += speed;
+			if (y < 1 - radius) 
+			{
+				y += speed3;
 			}
 			else
 			{
@@ -163,8 +163,9 @@ public:
 
 		if (direction == 4 || direction == 6 || direction == 8)  // left
 		{
-			if (x > -1 + radius) {
-				x -= speed;
+			if (x > -1 + radius) 
+			{
+				x -= speed4;
 			}
 			else
 			{
@@ -172,13 +173,13 @@ public:
 			}
 		}
 	}
-	
+
 	// Function to create the circles using the built in fuctions provided by the header files
-	void DrawCircle()
+	void DrawCircle() 
 	{
 		glColor3f(red, green, blue);
-		glBegin(GL_POLYGON);
-		for (int i = 0; i < 360; i++) {
+		glBegin(GL_POLYGON);                      
+		for (int i = 0; i < 180; i++) {            //changing from 360 to 180 made the circles look like ufos
 			float degInRad = i * DEG2RAD;
 			glVertex2f((cos(degInRad) * radius) + x, (sin(degInRad) * radius) + y);
 		}
@@ -195,10 +196,11 @@ int main(void) {
 
 	if (!glfwInit()) {
 		exit(EXIT_FAILURE);
-	}
+	} 
+	// Sets configuration for window
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-	GLFWwindow* window = glfwCreateWindow(480, 480, "Xavier's Random World of Circles", NULL, NULL); //Changed to Display my name in the top of window
+	GLFWwindow* window = glfwCreateWindow(660, 660, "Xavier's Random World of Circles", NULL, NULL); //Changed to Display my name in the top of window
 	if (!window) {
 		glfwTerminate();
 		exit(EXIT_FAILURE);
@@ -206,17 +208,17 @@ int main(void) {
 	glfwMakeContextCurrent(window);
 	glfwSwapInterval(1);
 
-	Brick brick(REFLECTIVE, 0.5, -0.4, 0.2, 0.258824, 0.258824, 0.435294); // Added additional Bricks to create my shape
+	// Added additional Bricks to create new brick layout
+	Brick brick(REFLECTIVE, 0.5, -0.4, 0.2, 0.258824, 0.258824, 0.435294);
 	Brick brick2(DESTRUCTABLE, -0.5, 0.4, 0.2, 0.0, 1.0, 1.0);
 	Brick brick3(DESTRUCTABLE, -0.5, -0.4, 0.2, 0, 0, 1);
-	Brick brick4(REFLECTIVE, 0, .15, 0.2, 1.0, 0.0, 0.0);
+	Brick brick4(REFLECTIVE, 0, 0, 0.2, 1.0, 0.0, 0.0);
 
 	Brick brick5(REFLECTIVE, 0.5, 0.4, 0.2, 1.00, 0.11, 0.68);
-	//Brick brick6(DESTRUCTABLE, 0, .75, 0.2, 0, 1, 0);
+	Brick brick6(DESTRUCTABLE, 0, .75, 0.2, 0, 1, 0);
 	Brick brick7(DESTRUCTABLE, 0, -.75, 0.2, 0.22, 0.69, 0.87);
 	Brick brick8(DESTRUCTABLE, -.8, 0, 0.2, 0.0, 1.0, 0.0);
 	Brick brick9(DESTRUCTABLE, .8, 0, 0.2, 1.0, 1.0, 0.0);
-
 
 	// Creates how the window will look
 	while (!glfwWindowShouldClose(window)) {
@@ -229,7 +231,7 @@ int main(void) {
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		processInput(window);
-
+		
 		// Detects the movement with in the "world" 
 		for (int i = 0; i < world.size(); i++)
 		{
@@ -238,30 +240,27 @@ int main(void) {
 			world[i].CheckCollision(&brick3);
 			world[i].CheckCollision(&brick4);
 			world[i].CheckCollision(&brick5);
-			//world[i].CheckCollision(&brick6);
+			world[i].CheckCollision(&brick6);
 			world[i].CheckCollision(&brick7);
 			world[i].CheckCollision(&brick8);
 			world[i].CheckCollision(&brick9);
-
 			world[i].MoveOneStep();
 			world[i].DrawCircle();
 
 		}
-
+		// refer to DrawBrick function to display the bricks unless brick is destroyed
 		brick.drawBrick();
 		brick2.drawBrick();
 		brick3.drawBrick();
 		brick4.drawBrick();
-
 		brick5.drawBrick();
-		//brick6.drawBrick();
+		brick6.drawBrick();
 		brick7.drawBrick();
 		brick8.drawBrick();
 		brick9.drawBrick();
 
-
 		glfwSwapBuffers(window);
-		glfwPollEvents();
+		glfwPollEvents(); //Checks for user input
 	}
 
 	glfwDestroyWindow(window);
@@ -269,19 +268,19 @@ int main(void) {
 	exit(EXIT_SUCCESS);
 }
 
-// proccess when keys are pressed to exit the program or Shoot circles out
-void processInput(GLFWwindow* window) 
+// Process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+void processInput(GLFWwindow* window)
 {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)   // Exits the program
 		glfwSetWindowShouldClose(window, true);
 
-	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
+	if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)   // Makes the circles come out
 	{
 		double r, g, b;
 		r = rand() / 10000;
 		g = rand() / 10000;
 		b = rand() / 10000;
-		Circle B(0, 0, 02, 2, 0.05, r, g, b);
+		Circle B(0, 0, 0, 2, 0.03, r, g, b); // Changing alters the size of the ufos
 		world.push_back(B);
 	}
 }
