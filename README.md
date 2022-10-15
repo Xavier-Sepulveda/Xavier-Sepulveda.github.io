@@ -40,5 +40,10 @@ My Code review can be found here: https://www.screencast.com/t/nRuNcNOj
 
 ## Milestone 2 - Enhancement One: Software Design and Engineering
 
-### Artifact
+### Artifact Explaination
+My Artifact for milestone two is based off an assignment from my CS-330 Computational Graphics and Visualization course, Coding Collisions World of Circle. What happens is there are squares displayed. From the center square, colored circles are shot out and bounce around the window. The program is written with functions that will detect collisions. Once a collision is made, it will trigger another action. The circles may continue to bounce off the walls or squares, or the squares will disappear. 
+
+### Reason for Inclusion
+I chose to include this artifact because it shows some understanding in computer graphics, while also showing skill using OpenGL and working with C++. OpenGL provides a huge set of functions that allows me to manipulate the graphics. I think this helps to showcase my ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals. By utilizing OpenGL’s large set of functions, I am able to end up with more seamless program. It is also used in the industry because the speed at which it processes the images, by using the GPU rather than a normal processor. To enhance the project, I will alter some of the functions to change the layout of the squares, along with changing the speed of the circles. I also added squares, making them into a shape of a heart. In line comments will show where the changes have been made, along with pictures of the difference between the original version versus the new enhanced version. By using the built in OpenGl functions I am able to create the window we are viewing, and configure it using the prefixed options by using the GLFW library and linking it to the project. 
+
 
