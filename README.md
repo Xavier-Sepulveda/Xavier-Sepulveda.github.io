@@ -132,5 +132,6 @@ I created an alternative schema using the mongoose package to be able to post ne
 ### DogSchema Image
 ![image](/assets/images/DogSchema.png)
 
+I included the date object in this project. This object will store the date when the posts are created, using the default value. This will use the current systems default date and time. As we can see it is important to be able to identify what is going on within the program. Using inline comments help to allow the reader the ability to have an idea of what is expected. In-line comments is another best practice to use. This helps in team/collaborative projects as well. While using post man as a testing tool I am able to demonstrate the ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions. From looking we can see that the artifact enhancement focused on creating the web application in a Windows OS in Java rather than the Python original version created in the school’s virtual environment. The original was also created in a Linux based environment, while the new version was created in Visual Studio Code in a Windows OS.
 
 
