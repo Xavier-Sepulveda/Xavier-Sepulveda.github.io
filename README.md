@@ -90,6 +90,11 @@ I was able to get the program fully functioning. I needed to do some additional 
 ## Milestone 4 - Database
 
 ### Artifact Description
+The artifact selected for this portion of the project was the Salvare Search for Rescue Web Application. This comes from CS 340 Client/Server Development course. The original application was developed in Python with the Dash framework and a non-relational database, MongoDB. It was also created using a virtual machine provided by the school, utilizing PyMongo and Jupyter Notebook. 
 
+### Reason for Inclusion
+To modify/ enhance the previous project, I decided to Create REST API using MongoDB. I will include some screen shots to the previous project, along with screen shots of the updated version to show my ability to work with databases.  Also, showing how I am able to work with other languages since the new version is created as a MongoDB and using Javascript. I believe this will cover almost every course outcome. There are aspects of using a security mindset when accessing the database, using tools(Postman) to test, designing a new project with a similar outcome as the original, and inline comment to employ collaborative environments. 
+
+You will be able to see everything mentioned below, and how it lines up if you look at the enhanced code, and read the comments. The comments in the app.js covers the outcome of employing strategies for building collaborative environments, by letting a new viewer know what’s happening within the code. To start, I began by using different packages to create alternative RESTful services. Using express, I was able to create a RESTful API service to maintain the server and use nodemon to help run the main application. By configuring the express app using the express package I am able to create the server by including some middleware and routes (API services). For the new version I used different routes to allow the user to navigate where needed. I created alternative CRUD functions like the GET() method to Fetch the data, POST() method to push the data,  Patch() to update the data, and the Delete() method to delete the data. If you look below, you can see the old CRUD functions compared to the newly refines routes. 
 
 
