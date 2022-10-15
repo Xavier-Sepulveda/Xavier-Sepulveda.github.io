@@ -200,7 +200,7 @@ int main(void) {
 	// Sets configuration for window
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-	GLFWwindow* window = glfwCreateWindow(660, 660, "Xavier's Random World of Circles", NULL, NULL); //Changed to Display my name in the top of window
+	GLFWwindow* window = glfwCreateWindow(660, 660, "Xavier's Random World of UFOs", NULL, NULL); //Changed to Display my name in the top of window
 	if (!window) {
 		glfwTerminate();
 		exit(EXIT_FAILURE);
