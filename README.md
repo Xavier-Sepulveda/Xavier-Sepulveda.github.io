@@ -4,10 +4,10 @@
 
 ## Table of Contents
 * Self Assesment
-* Code review
-* Coding Collision
-* Zoo Monitoring
-* Animal Shelter Database
+* Code review (Milestone 1)
+* Coding Collision (Milestone 2)
+* Zoo Monitoring (Milestone 3)
+* Animal Shelter Database (Milestone 4)
 
 ------------------------------------------------------------
 
@@ -76,17 +76,20 @@ I included this artifact because I believe it helps to showcase my ability to wo
 
  There were also a number of errors within the original code that did not allow the program to function properly. The updated/enhanced version includes an overall better structured layout. The data structures in the enhancement allow the program to be more efficient. If you look at the main AuthenticationSystem function, compared the main function in the enhanced version, it is a lot more efficient, east to use, and readable. The original Java code had long statements to check. It checked for user type, the converted password, and checked if they equal to the hashed password data. The improved version needs to just check what the username is, then utilizing the other functions, it makes sure the password is correct and allows for the program to display the text file that goes with the expected user. To improve the functionality, and touch base on the algorithms and data structure aspect for this section, I used a list to store the user passwords in a separate function. Originally the authorization was granted by going through some pretty long comparison statements that were in the original version's main function. This covers the course outcome of designing and evaluating computing solutions that solve a given problem. Also, inline comments let other know what’s happening within the code, which help to employ strategies for building collaborative environments. Others are able to look at the code and know what the functions are supposed to do. 
 
-
-
-
 ### Orgininal Files
 [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/OriginalCode)
 
 ### Enhanced Files
 [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/EnhancedCode)
 
-
 ### Reflect
+I was able to get the program fully functioning. I needed to do some additional research to refresh my memory on how the Java functions would need to be set up to work correctly when converted to python. While working on this I realized the importance of comments. Knowing what each section of code is doing makes it easier to understand what the expected outcome is. For this purpose, better comments in the original version would have made it easier to convert. I did run into some trouble when trying to test the conversion function. Luckily it was little syntax issues. This made me more aware of taking my time and not rushing. Along with trying to make more useability when working with the functions, so the code isn’t as messy. While working through this I learned about alternative hashing methods that could have been used to make the program more secure. This touches upon the outcome of developing with a security mindset. I also tried to leave clear comments before each portion of the enhanced code to allow other developers the ability to know what’s happening, and make changed if needed. This helps with employing Strategies for building a collaborative environment. Working through this also allowed me to brush up on the differences between computer languages. Many courses gave me the basics, but this made me realize that I need to continue to practice to help retain the knowledge gained.  
+
+------------------------------------------------------------
+
+## Milestone 4 - Database
+
+### Artifact Description
 
 
 
