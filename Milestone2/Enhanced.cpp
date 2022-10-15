@@ -63,7 +63,7 @@ public:
 	float radius;
 	float x;
 	float y;
-	float speed = 0.02;
+	float speed = 0.02; // By adjusting the speed, i can control how fst the circles move
 	int direction; // 1=up 2=right 3=down 4=left 5 = up right   6 = up left  7 = down right  8= down left
 
 	Circle(double xx, double yy, double rr, int dir, float rad, float r, float g, float b)
@@ -97,7 +97,21 @@ public:
 			}
 		}
 	}
+	
+	//attempted to check for circle collision
 
+	/*void CheckCollision(Circle* circ)
+	{
+		if ((x > circ->x - circ->radius && x <= circ->x + circ->radius) && (y > circ->y - circ->radius && y <= circ->y + circ->radius))
+
+		{
+			direction = GetRandomDirection();
+			x = x + 0.03;
+			y = y + 0.04;
+		}
+
+	}*/
+	
 	int GetRandomDirection()
 	{
 		return (rand() % 8) + 1;
