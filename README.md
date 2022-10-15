@@ -122,11 +122,15 @@ I utilized the mongoose.connect class to connect my MongoDB. Using the URL for t
 ![image](/assets/images/ConsolLog.png)
 
 To show the use of best practices by being able to validate function and methods are working properly I used Postman, an API platform used for API testing. This helps to monitor if the routes are performing as intended. From there I am able to utilize a GUI where I can obtain different types of responses that will need to be validated. Using a third-party platform like Postman, also covers the outcome of demonstrating an ability to use well-founded and innovative techniques, skills, and tools in computing practices.
-### Postman Image
+### Postman Image Wish A Save Post
 ![image](/assets/images/Postman1.png)
-### Postman Image
+### Postman Image With Stored Data
 ![image](/assets/images/Postman2.png)
 
+
+I created an alternative schema using the mongoose package to be able to post new data. If you look at the Dogs.js it includes the schema to be able to complete the post updates for our Dogs table in the database. This is done by passing the newly created objects.
+### DogSchema Image
+![image](/assets/images/DogSchema.png)
 
 
 
