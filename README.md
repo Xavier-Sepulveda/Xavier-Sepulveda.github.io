@@ -50,8 +50,11 @@ I chose to include this artifact because it shows some understanding in computer
 ![image](/assets/images/originalCollision.png)
 ### To see screencast of original running [Click Here!](https://www.screencast.com/t/OCDR9678D "Video Link") or at https://www.screencast.com/t/OCDR9678D
 For Original Artifact Code [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/blob/main/Milestone2/Original.cpp)
+
 ### Enhanced
 ![image](/assets/images/Enhanced.png)
+### To see screencast of enhanced running [Click Here!](https://www.screencast.com/t/yuLxCZhzq "Video Link") or at https://www.screencast.com/t/yuLxCZhzq
+For Enhanced Artifact Code [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/blob/main/Milestone2/Enhanced.cpp)
 
 ### To see screencast of enhanced running [Click Here!](https://www.screencast.com/t/yuLxCZhzq "Video Link") or at https://www.screencast.com/t/yuLxCZhzq
 For Enhanced Artifact Code [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/blob/main/Milestone2/Enhanced.cpp)
