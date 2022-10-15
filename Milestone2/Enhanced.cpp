@@ -1,16 +1,18 @@
+//header files
+
 #include <GLFW\glfw3.h>
-#include "linmath.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <conio.h>
-#include <iostream>
-#include <vector>
-#include <windows.h>
-#include <time.h>
+#include "linmath.h" // linear math library - provides the most used types required for programming computer graphics:
+#include <stdlib.h> // standard library that defines four variable types, several macros, and various functions for performing general functions
+#include <stdio.h> // header file used for various functions for performing input and output
+#include <conio.h> //header file used to provide console input/output
+#include <iostream> //header file which contains definitions of objects for standard input/output stream
+#include <vector> // used to tell  the compiler to not only use this code, but to also compile a file called vector
+#include <windows.h> // header file that contains the declarations for the functions in the Windows API
+
 
 using namespace std;
 
-const float DEG2RAD = 3.14159 / 180;
+const float DEG2RAD = 3.14159 / 180; // Converts degrees to radians
 
 void processInput(GLFWwindow* window);
 
@@ -24,13 +26,15 @@ public:
 	float x, y, width;
 	BRICKTYPE brick_type;
 	ONOFF onoff;
-
+	
+	//defines brick object data
 	Brick(BRICKTYPE bt, float xx, float yy, float ww, float rr, float gg, float bb)
 	{
 		brick_type = bt; x = xx; y = yy, width = ww; red = rr, green = gg, blue = bb;
 		onoff = ON;
 	};
-
+	
+	// Function to draw brick when on
 	void drawBrick()
 	{
 		if (onoff == ON)
@@ -55,8 +59,8 @@ public:
 	}
 };
 
-
-class Circle
+ // defines circle object data
+class Circle 
 {
 public:
 	float red, green, blue;
@@ -65,7 +69,7 @@ public:
 	float y;
 	float speed = 0.02; // By adjusting the speed, i can control how fst the circles move
 	int direction; // 1=up 2=right 3=down 4=left 5 = up right   6 = up left  7 = down right  8= down left
-
+	
 	Circle(double xx, double yy, double rr, int dir, float rad, float r, float g, float b)
 	{
 		x = xx;
@@ -77,7 +81,8 @@ public:
 		radius = rad;
 		direction = dir;
 	}
-
+	
+	//Checks if circle hit a brick, if reflective the circle will continue moving, if destructable brick disappears 
 	void CheckCollision(Brick* brk)
 	{
 		if (brk->brick_type == REFLECTIVE)
@@ -112,11 +117,13 @@ public:
 
 	}*/
 	
+	// Function to randomize the direction the circle will go
 	int GetRandomDirection()
 	{
 		return (rand() % 8) + 1;
 	}
-
+	
+	// to Change the direction of the circles
 	void MoveOneStep()
 	{
 		if (direction == 1 || direction == 5 || direction == 6)  // up
@@ -165,7 +172,8 @@ public:
 			}
 		}
 	}
-
+	
+	// Function to create the circles using the built in fuctions provided by the header files
 	void DrawCircle()
 	{
 		glColor3f(red, green, blue);
@@ -210,7 +218,7 @@ int main(void) {
 	Brick brick9(DESTRUCTABLE, .8, 0, 0.2, 1.0, 1.0, 0.0);
 
 
-
+	// Creates how the window will look
 	while (!glfwWindowShouldClose(window)) {
 		//Setup View
 		float ratio;
@@ -222,7 +230,7 @@ int main(void) {
 
 		processInput(window);
 
-		//Movement
+		// Detects the movement with in the "world" 
 		for (int i = 0; i < world.size(); i++)
 		{
 			world[i].CheckCollision(&brick);
@@ -261,8 +269,8 @@ int main(void) {
 	exit(EXIT_SUCCESS);
 }
 
-
-void processInput(GLFWwindow* window)
+// proccess when keys are pressed to exit the program or Shoot circles out
+void processInput(GLFWwindow* window) 
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
