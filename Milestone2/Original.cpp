@@ -185,7 +185,6 @@ int main(void) {
 	Brick brick4(REFLECTIVE, 0, 0, 0.2, 1, 0.5, 0.5);
 
 	while (!glfwWindowShouldClose(window)) {
-		//Setup View
 		float ratio;
 		int width, height;
 		glfwGetFramebufferSize(window, &width, &height);
@@ -195,7 +194,7 @@ int main(void) {
 
 		processInput(window);
 
-		//Movement
+		
 		for (int i = 0; i < world.size(); i++)
 		{
 			world[i].CheckCollision(&brick);
