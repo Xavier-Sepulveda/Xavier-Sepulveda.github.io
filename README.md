@@ -97,4 +97,31 @@ To modify/ enhance the previous project, I decided to Create REST API using Mong
 
 You will be able to see everything mentioned below, and how it lines up if you look at the enhanced code, and read the comments. The comments in the app.js covers the outcome of employing strategies for building collaborative environments, by letting a new viewer know what’s happening within the code. To start, I began by using different packages to create alternative RESTful services. Using express, I was able to create a RESTful API service to maintain the server and use nodemon to help run the main application. By configuring the express app using the express package I am able to create the server by including some middleware and routes (API services). For the new version I used different routes to allow the user to navigate where needed. I created alternative CRUD functions like the GET() method to Fetch the data, POST() method to push the data,  Patch() to update the data, and the Delete() method to delete the data. If you look below, you can see the old CRUD functions compared to the newly refines routes. 
 
+### Original CRUD Functions
+![image](/assets/images/OriginalCRUD.png)
+### Enhanced
+![image](/assets/images/EnhancedMethods.png)
+
+With the CRUD functions stored in our routes file rather than in the main code like the previous version. To configure MongoDB with this RESTful API, I installed the mongoose package. This allowed me to configure and connect mongo DB to this project. Below will be a snippet of how I connected to the original vs the updated version.
+### Original Connection Method
+![image](/assets/images/OriginalConnection.png)
+
+To cover the outcome of developing with a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources, I altered where the connection string lives, so it isn’t visible in the main code. The original had the connection string in the code making it available to be seen easily. To improve the design and make the system more secure I separated the connection string from the main code. To demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals, I incorporated using additional packages such as the dotenv, express, mongoose, nodemon, and body-parser. I will go over why the dotenv package was used. To hide the connection string with the credentials, I installed the dotenv package. This allows me to configure the environment, protecting my password so it is not visible. This lets the program load the variable from the .env file rather than displaying in the app.js code. The connection string is then stored in the .env file and imported into the app.js file.
+### Connection String From .env File
+![image](/assets/images/EnvConnection.png)
+### From app.js File
+![image](/assets/images/AppConnection.png)
+
+To cover the outcome of develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources. In my MongoDB I created a new user admin with password admin to provide access to the database. This admin was created with read and write permissions. We can see in both the original and updated version the string holds the log in credential. By storing that string in the .env file it shows I’m trying to create the new version with more of a security mindset. For security purposes I can make it so the database is only accessible from a particular IP address. For this project I left it open to allow access from anywhere.
+
+I utilized the mongoose.connect class to connect my MongoDB. Using the URL for the data base with the user credentials and a call back function with a console log to show that we are connected to the database. Using the callback function with a consol log shows the use of well-founded and innovative techniques, skills, and tools in computing practices, because it will keep a log of events, and let the developer know if things are functioning as intended.
+### Terminal Message to Know We Are Connected
+![image](/assets/images/ConsolLog.png)
+
+To show the use of best practices by being able to validate function and methods are working properly I used Postman, an API platform used for API testing. This helps to monitor if the routes are performing as intended. From there I am able to utilize a GUI where I can obtain different types of responses that will need to be validated. Using a third-party platform like Postman, also covers the outcome of demonstrating an ability to use well-founded and innovative techniques, skills, and tools in computing practices.
+### Postman Image
+![image](/assets/images/Postman1.png)
+### Postman Image
+![image](/assets/images/Postman2.png)
+
 
