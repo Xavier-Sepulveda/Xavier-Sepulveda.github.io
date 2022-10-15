@@ -81,9 +81,10 @@ I included this artifact because I believe it helps to showcase my ability to wo
 
 
 ### Orgininal Files
-[LINK](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/OriginalCode)
+[Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/OriginalCode)
+
 ### Enhanced Files
-[LINK](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/EnhancedCode)
+[Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone3/EnhancedCode)
 
 
 ### Reflect
