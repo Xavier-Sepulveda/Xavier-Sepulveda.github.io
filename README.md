@@ -96,7 +96,7 @@ I was able to get the program fully functioning. I needed to do some additional 
 ### Artifact Description
 The artifact selected for this portion of the project was the Salvare Search for Rescue Web Application. This comes from CS 340 Client/Server Development course. The original application was developed in Python with the Dash framework and a non-relational database, MongoDB. It was also created using a virtual machine provided by the school, utilizing PyMongo and Jupyter Notebook. 
 
-### Reason for Inclusion
+### Reason For Inclusion
 To modify/enhance the previous project, I decided to Create REST API using MongoDB. I will include some screen shots to the previous project, along with screen shots of the updated version to show my ability to work with databases.  Also, showing how I am able to work with other languages since the new version is created as a MongoDB and using Javascript. I believe this will cover almost every course outcome. There are aspects of using a security mindset when accessing the database, using tools(Postman) to test, designing a new project with a similar outcome as the original, and inline comment to employ collaborative environments. 
 
 ### For Original Artifact Code [Click Here!](https://github.com/Xavier-Sepulveda/Xavier-Sepulveda.github.io/tree/main/Milestone4/Original)
@@ -122,11 +122,11 @@ To cover the outcome of developing with a security mindset that anticipates adve
 To cover the outcome of develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources. In my MongoDB I created a new user admin with password admin to provide access to the database. This admin was created with read and write permissions. We can see in both the original and updated version the string holds the log in credential. By storing that string in the .env file it shows I’m trying to create the new version with more of a security mindset. For security purposes I can make it so the database is only accessible from a particular IP address. For this project I left it open to allow access from anywhere.
 
 I utilized the mongoose.connect class to connect my MongoDB. Using the URL for the data base with the user credentials and a call back function with a console log to show that we are connected to the database. Using the callback function with a consol log shows the use of well-founded and innovative techniques, skills, and tools in computing practices, because it will keep a log of events, and let the developer know if things are functioning as intended.
-### Terminal Message to Know We Are Connected
+### Terminal Message To Know We Are Connected
 ![image](/assets/images/ConsolLog.png)
 
 To show the use of best practices by being able to validate function and methods are working properly I used Postman, an API platform used for API testing. This helps to monitor if the routes are performing as intended. From there I am able to utilize a GUI where I can obtain different types of responses that will need to be validated. Using a third-party platform like Postman, also covers the outcome of demonstrating an ability to use well-founded and innovative techniques, skills, and tools in computing practices.
-### Postman Image Wish A Save Post
+### Postman Image With A Save Post
 ![image](/assets/images/Postman1.png)
 ### Postman Image With Stored Data
 ![image](/assets/images/Postman2.png)
