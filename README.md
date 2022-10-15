@@ -34,7 +34,7 @@ Many courses touched upon the importance of security. You can see some aspects p
 ------------------------------------------------------------
 
 ## Milestone 1 - Code Review
-My Code review can be found here: https://www.screencast.com/t/nRuNcNOj 
+My Code review can be found here: [LINK](https://www.screencast.com/t/nRuNcNOj "Video Link") 
 
 ------------------------------------------------------------
 
@@ -46,8 +46,8 @@ My Artifact for milestone two is based off an assignment from my CS-330 Computat
 ### Reason for Inclusion
 I chose to include this artifact because it shows some understanding in computer graphics, while also showing skill using OpenGL and working with C++. OpenGL provides a huge set of functions that allows me to manipulate the graphics. I think this helps to showcase my ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals. By utilizing OpenGL’s large set of functions, I am able to end up with more seamless program. It is also used in the industry because the speed at which it processes the images, by using the GPU rather than a normal processor. To enhance the project, I will alter some of the functions to change the layout of the squares, along with changing the speed of the circles. I also added squares, making the layout of the bricks different. By addiing  In line comments will show where the changes have been made, along with pictures of the difference between the original version versus the new enhanced version. By using the built in OpenGl functions I am able to create the window we are viewing, and configure it using the prefixed options by using the GLFW library and linking it to the project. 
 
-### Screencast of original running https://www.screencast.com/t/OCDR9678D
-### Screencast of enhanced running https://www.screencast.com/t/yuLxCZhzq
+### Screencast of original running [LINK](https://www.screencast.com/t/OCDR9678D "Video Link")
+### Screencast of enhanced running [LINK](https://www.screencast.com/t/yuLxCZhzq "Video Link")
 
 By using OpenGL's built in functions, I was able to make the window bigger and changed the window title. If you look at the main() function I added the additional brick objects to create my new brick layout with different colors. To do so, I needed to adjust the points at which the brick sits on the x and y axis of the window.  I have also modified the float speed of the circles to come out faster. Altering the DrawCircle() method I was able to cut the circle in half, to make them look like flying saucers/ ufos buy changing the for loop. I added additional speeds in the circle class. Those were used in the if statements to change speed of circle/ufo. While attempting to alter some more, I created a CheckCollision(Circle* circ) function for the circles, but wasn’t able to implement it properly. I have added my name to the window title and adjusted the size of the window as well by updating the main() function. By utilizing the functions provided by the header files I was able to create the updated window using the glfwCreateWindow to create the window object. 
 
