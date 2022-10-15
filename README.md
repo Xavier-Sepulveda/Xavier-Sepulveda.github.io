@@ -106,7 +106,7 @@ You will be able to see everything mentioned below, and how it lines up if you l
 
 ### Original CRUD Functions
 ![image](/assets/images/OriginalCRUD.png)
-### Enhanced
+### Enhanced Update Method
 ![image](/assets/images/EnhancedMethods.png)
 
 With the CRUD functions stored in our routes file rather than in the main code like the previous version. To configure MongoDB with this RESTful API, I installed the mongoose package. This allowed me to configure and connect mongo DB to this project. Below will be a snippet of how I connected to the original vs the updated version.
