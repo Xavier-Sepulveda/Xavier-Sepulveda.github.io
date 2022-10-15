@@ -34,7 +34,7 @@ Many courses touched upon the importance of security. You can see some aspects p
 ------------------------------------------------------------
 
 ## Milestone 1 - Code Review
-My Code review can be found here: [LINK](https://www.screencast.com/t/nRuNcNOj "Video Link")  or at https://www.screencast.com/t/nRuNcNOj
+My Code review can be found here: [Code Review](https://www.screencast.com/t/nRuNcNOj "Video Link")  or at https://www.screencast.com/t/nRuNcNOj
 
 ------------------------------------------------------------
 
